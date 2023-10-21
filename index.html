@@ -15,44 +15,20 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css?family=Handjet"
 		/>
-		<script>
-			function displayTime() {
-				var dateTime = new Date();
-				var hrs = dateTime.getHours();
-				var min = dateTime.getMinutes();
-				var sec = dateTime.getSeconds();
-				var session = document.getElementById("session");
-				var date =dateTime.getDay()+"\t/ \t"+dateTime.getMonth()+"\t / \t"+dateTime.getFullYear();
-				if (hrs >= 12) {
-					session.innerHTML = "PM";
-				} else {
-					session.innerHTML = "AM";
-				}
-
-				if (hrs > 12) {
-					hrs = hrs - 12;
-				}
-
-				document.getElementById("hours").innerHTML = hrs;
-				document.getElementById("minutes").innerHTML = min;
-				document.getElementById("seconds").innerHTML = sec;
-				document.getElementById("date").innerHTML = date;
-			}
-			setInterval(displayTime, 10);
-		</script>
 		<style>
 			body {
 				font-family: "Handjet";
 				background-color: #1d1e21;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				height: 100vh;
 				width: 100vw;
 				margin: 0;
 			}
 			.dashboard {
 				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
+				flex-direction: column-reverse;
 			}
 			.img {
 				display: flex;
@@ -81,32 +57,12 @@
 			.bookmark > ul > li {
 				padding-top: 1rem;
 			}
-			.clock {
-				color: #ffffff;
-				font-size: 22px;
-				padding-left: 7rem;
-				padding-top: 2rem;
-				font-weight: 600;
-			}
 		</style>
 	</head>
 	<body>
-		<div class="clock">
-			<span id="hours">00</span>
-			<span>:</span>
-			<span id="minutes">00</span>
-			<span>:</span>
-			<span id="seconds">00</span>
-			<span id="session">AM</span>
+		<div class="dahboard">
 			<br>
-			<span id="date"></span>
-		</div>
-		<div class="date">
-			
-		</div>
-		<div class="dashboard">
-			<br />
-			<br />
+			<br>
 			<div class="img">
 				<img
 					src="https://ik.imagekit.io/chaitanya/homepage/icon.png?updatedAt=1697700838672"
